@@ -9,6 +9,18 @@
     --texte:#1f2937;
 }
 
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--blanc);
+    color: var(--texte);
+
+    /* ---- Déco florale fond doux ---- */
+    background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f7e7b2' fill-opacity='0.25'%3E%3Cpath d='M100 200c50-80 150-80 200 0s50 180-50 180-150-100-150-180z'/%3E%3Cpath d='M250 50c-40 60-120 60-160 0S10-40 70-40s180 20 180 90z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
 /* Reset */
 *{margin:0;padding:0;box-sizing:border-box}
 body{
