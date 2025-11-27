@@ -1,276 +1,168 @@
-/* style.css */
-:root {
-    --bleu-fonce: #1e3a8a;
-    --bleu-moyen: #1e40af;
-    --bleu-clair: #3b82f6;
-    --dore: #d4af37;
-    --dore-clair: #f7e7b2;
-    --blanc: #ffffff;
-    --gris-clair: #f3f4f6;
-    --texte: #1f2937;
+:root{
+    --bleu-fonce:#1e3a8a;
+    --bleu-moyen:#1e40af;
+    --bleu-clair:#3b82f6;
+    --dore:#d4af37;
+    --dore-clair:#f7e7b2;
+    --blanc:#ffffff;
+    --gris-clair:#f3f4f6;
+    --texte:#1f2937;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    background:var(--blanc);
+    color:var(--texte);
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--texte);
-    background-color: var(--blanc);
+.container{
+    max-width:1200px;
+    width:90%;
+    margin:auto;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* HEADER */
+header{
+    background:var(--bleu-fonce);
+    color:var(--blanc);
+    padding:1rem 0;
+    position:sticky;
+    top:0;
+    z-index:20;
+}
+.header-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+#hamburger{
+    display:none;
+    background:transparent;
+    border:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+.main-nav ul{
+    display:flex;
+    list-style:none;
+    gap:1.2rem;
+}
+.main-nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+.main-nav a:hover{color:var(--dore-clair)}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,var(--bleu-fonce),var(--bleu-moyen));
+    color:white;
+    text-align:center;
+    padding:4rem 0;
+}
+.hero h2{font-size:2.3rem;margin-bottom:1rem}
+.hero p{max-width:600px;margin:auto;margin-bottom:1.5rem;font-size:1.1rem}
+.btn{
+    display:inline-block;
+    padding:.8rem 1.3rem;
+    background:var(--dore);
+    color:var(--bleu-fonce);
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:700;
 }
 
-/* En-tête */
-header {
-    background-color: var(--bleu-fonce);
-    color: var(--blanc);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* LIVRES EN GRILLE 100% RESPONSIVE */
+.grid-livres{
+    display:grid;
+    gap:1.5rem;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    margin-top:2rem;
+}
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 22px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+.card:hover{transform:translateY(-6px)}
+.card-image img{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+}
+.card-content{padding:1rem}
+.card-content h3{color:var(--bleu-fonce)}
+.prix{color:var(--dore);font-weight:800;margin:.5rem 0}
+.btn-acheter{
+    width:100%;
+    padding:.7rem;
+    background:var(--bleu-clair);
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:.2s;
+}
+.btn-acheter:hover{background:var(--bleu-moyen)}
+
+/* FORMATIONS */
+.formations{padding:4rem 0}
+.formations h2{text-align:center;margin-bottom:2rem}
+.formations-container{
+    display:grid;
+    gap:1rem;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+.formation{
+    background:var(--gris-clair);
+    padding:1.5rem;
+    border-left:4px solid var(--dore);
+    border-radius:10px;
+    transition:.2s;
+}
+.formation:hover{transform:translateY(-5px)}
+
+/* CONTACT */
+.contact{
+    background:var(--bleu-fonce);
+    color:white;
+    padding:4rem 0;
+}
+.contact h2{text-align:center;margin-bottom:2rem}
+.contact-info{
+    display:flex;
+    justify-content:center;
+    gap:2.5rem;
+    flex-wrap:wrap;
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* FOOTER */
+footer{
+    background:var(--bleu-moyen);
+    text-align:center;
+    padding:1rem;
+    color:white;
 }
 
-.logo h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.2rem;
-}
-
-.logo p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 1.5rem;
-}
-
-nav ul li a {
-    color: var(--blanc);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: var(--dore-clair);
-}
-
-/* Section Hero */
-.hero {
-    background: linear-gradient(135deg, var(--bleu-fonce) 0%, var(--bleu-moyen) 100%);
-    color: var(--blanc);
-    padding: 5rem 0;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--dore);
-    color: var(--bleu-fonce);
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: var(--dore-clair);
-}
-
-/* Section Livres */
-.livres {
-    padding: 5rem 0;
-    background-color: var(--gris-clair);
-}
-
-.livres h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.2rem;
-    color: var(--bleu-fonce);
-}
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.card {
-    background-color: var(--blanc);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 1.5rem;
-}
-
-.card-content h3 {
-    color: var(--bleu-fonce);
-    margin-bottom: 0.5rem;
-}
-
-.prix {
-    font-weight: bold;
-    color: var(--dore);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.btn-acheter {
-    background-color: var(--bleu-clair);
-    color: var(--blanc);
-    border: none;
-    padding: 0.7rem 1.2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-.btn-acheter:hover {
-    background-color: var(--bleu-moyen);
-}
-
-/* Section Formations */
-.formations {
-    padding: 5rem 0;
-}
-
-.formations h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.2rem;
-    color: var(--bleu-fonce);
-}
-
-.formations-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.formation {
-    background-color: var(--gris-clair);
-    padding: 2rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--dore);
-    transition: transform 0.3s;
-}
-
-.formation:hover {
-    transform: translateY(-3px);
-}
-
-.formation h3 {
-    color: var(--bleu-fonce);
-    margin-bottom: 1rem;
-}
-
-/* Section Contact */
-.contact {
-    padding: 5rem 0;
-    background-color: var(--bleu-fonce);
-    color: var(--blanc);
-}
-
-.contact h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.2rem;
-}
-
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    flex-wrap: wrap;
-}
-
-.contact-item h3 {
-    margin-bottom: 1rem;
-    color: var(--dore-clair);
-}
-
-/* Pied de page */
-footer {
-    background-color: var(--bleu-moyen);
-    color: var(--blanc);
-    padding: 1.5rem 0;
-    text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
+/* RESPONSIVE */
+@media(max-width:900px){
+    #hamburger{display:block}
+    .main-nav ul{
+        display:none;
+        position:absolute;
+        right:10px;
+        top:60px;
+        background:var(--bleu-fonce);
+        padding:1rem;
+        border-radius:10px;
+        flex-direction:column;
+        gap:1rem;
     }
-    
-    nav ul {
-        margin-top: 1rem;
-    }
-    
-    nav ul li {
-        margin: 0 0.5rem;
-    }
-    
-    .hero h2 {
-        font-size: 2rem;
-    }
-    
-    .contact-info {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-    }
+    .main-nav ul.show{display:flex}
 }
