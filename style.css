@@ -9,24 +9,20 @@
     --texte:#1f2937;
 }
 
-body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--blanc);
-    color: var(--texte);
-
-    /* ---- Déco florale fond doux ---- */
-    background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f7e7b2' fill-opacity='0.25'%3E%3Cpath d='M100 200c50-80 150-80 200 0s50 180-50 180-150-100-150-180z'/%3E%3Cpath d='M250 50c-40 60-120 60-160 0S10-40 70-40s180 20 180 90z'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-
 /* Reset */
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
     font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-    background:var(--blanc);
     color:var(--texte);
+
+    /* ---- Déco florale sur tout le site ---- */
+    background-color: var(--blanc);
+    background-image: url("data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.07'%3E%3Cpath d='M300 150c80-140 240-140 320 0s80 260-80 260-240-120-240-260z'/%3E%3Cpath d='M450 40c-70 100-210 100-280 0S40-70 120-70s320 30 330 110z'/%3E%3Cpath d='M150 350c50 90 150 140 250 120 60-10 100-30 140-70-40 110-160 200-290 170-140-30-220-170-180-300 20 50 40 60 80 80z'/%3E%3C/g%3E%3C/svg%3E");
+
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .container{
