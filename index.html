@@ -2,9 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bosagnon RH Édition - Livres et Formations</title>
+    <meta name="description" content="Découvrez les œuvres de Mme Roumassé BOSSÉ-BÉNISSAN, coach et consultante en développement personnel" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
     <!-- En-tête -->
@@ -16,7 +18,7 @@
             </div>
 
             <nav class="main-nav" id="mainNav">
-                <button id="hamburger">☰</button>
+                <button id="hamburger" aria-label="Ouvrir le menu">☰</button>
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#livres">Livres</a></li>
@@ -32,54 +34,63 @@
         <div class="container hero-inner">
             <div class="hero-content">
                 <h2>Développez votre potentiel avec nos livres et formations</h2>
-                <p>Découvrez les œuvres de Mme Roumassé BOSSÉ-BÉNISSAN, coach et consultante en développement personnel</p>
+                <p>Découvrez les œuvres de Mme Roumassé BOSSÉ-BÉNISSAN, coach et consultante en développement personnel et professionnel. Des ressources précieuses pour votre épanouissement.</p>
                 <a href="#livres" class="btn">Découvrir nos livres</a>
             </div>
         </div>
     </section>
 
-    <!-- LIVRES VERSION GRILLE RESPONSIVE -->
+    <!-- Livres -->
     <section id="livres" class="livres">
         <div class="container">
-            <h2>Nos Livres</h2>
-
+            <h2 class="section-title">Nos Livres</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem; color: #666; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Des ouvrages inspirants pour votre développement personnel et professionnel
+            </p>
+            
             <div class="grid-livres">
                 <!-- Carte Livre 1 -->
                 <div class="card">
                     <div class="card-image">
-                        <img src="https://via.placeholder.com/300x400/1e3a8a/ffffff?text=Citation+Personnelle">
+                        <img src="365.jpg" alt="Citation personnelle 365 JOURS AVEC NOTRE ÊTRE" />
                     </div>
                     <div class="card-content">
                         <h3>Citation personnelle 365 JOURS AVEC NOTRE ÊTRE</h3>
-                        <p class="prix">20.000 FCFA</p>
-                        <p>Un livre inspirant pour accompagner votre développement personnel tout au long de l'année.</p>
-                        <button class="btn-acheter">Acheter maintenant</button>
+                        <p>Un livre inspirant pour accompagner votre développement personnel tout au long de l'année. Chaque jour, une citation motivante pour vous guider vers l'épanouissement.</p>
+                        <span class="prix">20.000 FCFA</span>
+                        <button class="btn-acheter">
+                            <i class="fas fa-shopping-cart"></i> Acheter maintenant
+                        </button>
                     </div>
                 </div>
 
-                <!-- Livre 2 -->
+                <!-- Carte Livre 2 -->
                 <div class="card">
                     <div class="card-image">
-                        <img src="https://via.placeholder.com/300x400/1e40af/ffffff?text=Décider+d'être+soi">
+                        <img src="Decidez detre soi.jpg" alt="Décider d'être soi" />
                     </div>
                     <div class="card-content">
                         <h3>Décider d'être soi</h3>
-                        <p class="prix">7.000 FCFA</p>
-                        <p>Un guide pour apprendre à s'affirmer et vivre en accord avec ses valeurs.</p>
-                        <button class="btn-acheter">Acheter maintenant</button>
+                        <p>Un guide pratique pour apprendre à s'affirmer, définir ses valeurs et vivre en accord avec soi-même dans tous les aspects de la vie.</p>
+                        <span class="prix">7.000 FCFA</span>
+                        <button class="btn-acheter">
+                            <i class="fas fa-shopping-cart"></i> Acheter maintenant
+                        </button>
                     </div>
                 </div>
 
-                <!-- Livre 3 -->
+                <!-- Carte Livre 3 -->
                 <div class="card">
                     <div class="card-image">
-                        <img src="https://via.placeholder.com/300x400/3b82f6/ffffff?text=Chuter+et+alors">
+                        <img src="PHOTO-2025-11-11-19-49-12-3.jpg" alt="Chuter et alors" />
                     </div>
                     <div class="card-content">
                         <h3>Chuter et alors</h3>
-                        <p class="prix">5.000 FCFA</p>
-                        <p>Apprenez à transformer vos échecs en opportunités de croissance.</p>
-                        <button class="btn-acheter">Acheter maintenant</button>
+                        <p>Un livre transformateur qui vous apprend à voir les échecs non comme des fins, mais comme des opportunités de croissance et de développement.</p>
+                        <span class="prix">5.000 FCFA</span>
+                        <button class="btn-acheter">
+                            <i class="fas fa-shopping-cart"></i> Acheter maintenant
+                        </button>
                     </div>
                 </div>
             </div>
@@ -89,26 +100,30 @@
     <!-- Formations -->
     <section id="formations" class="formations">
         <div class="container">
-            <h2>Nos Formations</h2>
+            <h2 class="section-title">Nos Formations</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem; color: #666; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Des programmes complets pour développer vos compétences et votre potentiel
+            </p>
+            
             <div class="formations-container">
                 <div class="formation">
                     <h3>DISC+FM</h3>
-                    <p>Formation complète d'analyse comportementale pour mieux comprendre les profils individuels et améliorer la communication.</p>
+                    <p>Formation complète d'analyse comportementale pour mieux comprendre les profils individuels et améliorer la communication en équipe. Idéal pour les managers et leaders.</p>
                 </div>
 
                 <div class="formation">
                     <h3>Programme ÊTRE</h3>
-                    <p>Un parcours pour se découvrir et s'assumer pleinement dans sa vie personnelle et professionnelle.</p>
+                    <p>Un parcours transformateur pour se découvrir et s'assumer pleinement dans sa vie personnelle et professionnelle. Développez votre authenticité.</p>
                 </div>
 
                 <div class="formation">
                     <h3>Programme AI2P</h3>
-                    <p>Formation pour administrer, innover, performer et perdurer dans votre activité professionnelle.</p>
+                    <p>Formation pour administrer, innover, performer et perdurer dans votre activité professionnelle. Une méthodologie éprouvée pour le succès durable.</p>
                 </div>
 
                 <div class="formation">
                     <h3>Gestion des RH pour PME</h3>
-                    <p>L'essentiel de la gestion des ressources humaines pour les dirigeants et responsables des petites et moyennes entreprises.</p>
+                    <p>L'essentiel de la gestion des ressources humaines pour les dirigeants et responsables des petites et moyennes entreprises. Pratique et efficace.</p>
                 </div>
             </div>
         </div>
@@ -117,24 +132,39 @@
     <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contactez-nous</h2>
+            <h2 class="section-title" style="color: white;">Contactez-nous</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem; color: rgba(255,255,255,0.9); max-width: 700px; margin-left: auto; margin-right: auto;">
+                N'hésitez pas à nous contacter pour plus d'informations sur nos livres et formations
+            </p>
+            
             <div class="contact-info">
                 <div class="contact-item">
-                    <h3>Téléphone</h3>
+                    <h3><i class="fas fa-phone"></i> Téléphone</h3>
                     <p>+225 07 87 423 005</p>
                     <p>+225 21 50 019 877</p>
                 </div>
+                
                 <div class="contact-item">
-                    <h3>Email</h3>
+                    <h3><i class="fas fa-envelope"></i> Email</h3>
                     <p>pca@djolavita.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3><i class="fas fa-clock"></i> Horaires</h3>
+                    <p>Lundi - Vendredi</p>
+                    <p>9h00 - 18h00</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container footer-inner">
             <p>&copy; 2025 Bosagnon RH Édition - Tous droits réservés</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                Développement personnel et professionnel
+            </p>
         </div>
     </footer>
 
